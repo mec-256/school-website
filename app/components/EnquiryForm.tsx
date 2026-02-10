@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 
 export default function EnquiryForm() {
   const [form, setForm] = useState({
@@ -14,11 +14,15 @@ export default function EnquiryForm() {
 
   const [status, setStatus] = useState("");
 
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e: ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("Submitting...");
 

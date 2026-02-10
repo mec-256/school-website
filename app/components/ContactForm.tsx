@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -11,11 +11,13 @@ export default function ContactForm() {
 
   const [status, setStatus] = useState("");
 
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("Message sent! We will reply soon.");
     setForm({ name: "", email: "", message: "" });

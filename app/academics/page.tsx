@@ -89,7 +89,7 @@ export default function AcademicsPage() {
 
           <p className="text-gray-700 text-lg mt-5">
             We believe every child learns differently — which is why our teachers
-            use personalized strategies to meet each student's strengths and needs.
+            use personalized strategies to meet each student&apos;s strengths and needs.
             Continuous assessments ensure steady academic progress.
           </p>
         </div>
