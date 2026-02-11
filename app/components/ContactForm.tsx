@@ -24,55 +24,57 @@ export default function ContactForm() {
   };
 
   return (
-    <form 
-      onSubmit={handleSubmit} 
-      className="bg-white p-8 rounded-xl shadow-lg space-y-6"
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-6 rounded-2xl border border-slate-200 bg-white/80 p-8 shadow-sm backdrop-blur"
     >
       <div>
-        <label className="font-medium text-gray-700">Your Name</label>
+        <label className="text-sm font-medium text-slate-700">Your name</label>
         <input 
           type="text"
           name="name"
           required
           value={form.name}
           onChange={handleChange}
-          className="w-full mt-1 p-3 border rounded-lg text-black"
+          className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 outline-none ring-offset-1 transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
         />
       </div>
 
       <div>
-        <label className="font-medium text-gray-700">Your Email</label>
+        <label className="text-sm font-medium text-slate-700">Your email</label>
         <input 
           type="email"
           name="email"
           required
           value={form.email}
           onChange={handleChange}
-          className="w-full mt-1 p-3 border rounded-lg text-black"
+          className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 outline-none ring-offset-1 transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
         />
       </div>
 
       <div>
-        <label className="font-medium text-gray-700">Message</label>
+        <label className="text-sm font-medium text-slate-700">Message</label>
         <textarea 
           name="message"
           rows={4}
           required
           value={form.message}
           onChange={handleChange}
-          className="w-full mt-1 p-3 border rounded-lg text-black"
+          className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 outline-none ring-offset-1 transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
         />
       </div>
 
       <button 
         type="submit"
-        className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 rounded-lg font-semibold"
+        className="inline-flex w-full items-center justify-center rounded-full bg-blue-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-800 hover:shadow-md sm:w-auto"
       >
         Send Message
       </button>
 
       {status && (
-        <p className="text-center text-blue-900 font-medium mt-4">{status}</p>
+        <p className="mt-3 text-center text-sm font-medium text-blue-900">
+          {status}
+        </p>
       )}
     </form>
   );

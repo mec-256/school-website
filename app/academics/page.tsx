@@ -1,45 +1,45 @@
 import Navbar from "../components/Navbar";
+import PageHero from "../components/PageHero";
 
 export default function AcademicsPage() {
   return (
     <main>
       <Navbar />
 
-      {/* Header Section */}
-      <section className="pt-32 pb-20 bg-blue-50">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold text-blue-900">Academics</h1>
-          <p className="mt-6 text-gray-700 text-lg">
-            A structured, student-centered curriculum designed to build strong foundations
-            and nurture academic excellence at every level.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Academics"
+        title="Academics at SSKennedy"
+        description="A structured, student-centered curriculum designed to build strong foundations and nurture academic excellence at every level."
+      />
 
       {/* Overview Section */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold text-blue-900 mb-6">Our Academic Approach</h2>
-        <p className="text-gray-700 leading-7 text-lg">
+      <section className="page-shell py-16">
+        <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+          Our academic approach
+        </h2>
+        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           At SSKennedy School, academics go beyond textbooks. We follow a holistic teaching
           model that focuses on concept clarity, hands-on learning, moral values, and
           real-world applications. Our structured curriculum ensures students develop
           strong communication skills, analytical thinking, creativity, and confidence.
         </p>
 
-        <p className="text-gray-700 leading-7 text-lg mt-5">
+        <p className="mt-4 text-sm leading-7 text-slate-700 sm:text-base">
           Our experienced faculty use modern teaching tools, interactive sessions,
           and activity-based learning to make education engaging and meaningful.
         </p>
       </section>
 
       {/* Sections for Different Levels */}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+      <section className="bg-slate-50 py-16">
+        <div className="page-shell grid grid-cols-1 gap-10 md:grid-cols-3">
 
           {/* Pre-Primary */}
-          <div className="bg-white p-8 rounded-xl shadow">
-            <h3 className="text-2xl font-bold text-blue-900">Pre-Primary (Nursery–UKG)</h3>
-            <ul className="mt-4 text-gray-700 space-y-2 leading-7">
+          <div className="rounded-2xl border border-slate-200 bg-white/80 p-7 shadow-sm">
+            <h3 className="text-xl font-semibold text-slate-900">
+              Pre-Primary (Nursery–UKG)
+            </h3>
+            <ul className="mt-4 space-y-2 text-sm leading-7 text-slate-700">
               <li>• Activity-based learning</li>
               <li>• Phonics & early numeracy skills</li>
               <li>• Playgroup activities</li>
@@ -49,9 +49,11 @@ export default function AcademicsPage() {
           </div>
 
           {/* Primary */}
-          <div className="bg-white p-8 rounded-xl shadow">
-            <h3 className="text-2xl font-bold text-blue-900">Primary (1st–5th Grade)</h3>
-            <ul className="mt-4 text-gray-700 space-y-2 leading-7">
+          <div className="rounded-2xl border border-slate-200 bg-white/80 p-7 shadow-sm">
+            <h3 className="text-xl font-semibold text-slate-900">
+              Primary (1st–5th Grade)
+            </h3>
+            <ul className="mt-4 space-y-2 text-sm leading-7 text-slate-700">
               <li>• Strong foundation in Math, Science & English</li>
               <li>• Hands-on projects & experiments</li>
               <li>• Regular assessments & feedback</li>
@@ -61,9 +63,11 @@ export default function AcademicsPage() {
           </div>
 
           {/* High School */}
-          <div className="bg-white p-8 rounded-xl shadow">
-            <h3 className="text-2xl font-bold text-blue-900">High School (6th–10th Grade)</h3>
-            <ul className="mt-4 text-gray-700 space-y-2 leading-7">
+          <div className="rounded-2xl border border-slate-200 bg-white/80 p-7 shadow-sm">
+            <h3 className="text-xl font-semibold text-slate-900">
+              High School (6th–10th Grade)
+            </h3>
+            <ul className="mt-4 space-y-2 text-sm leading-7 text-slate-700">
               <li>• Subject specialization begins</li>
               <li>• Digital classrooms & online resources</li>
               <li>• Science & math labs for practical learning</li>
@@ -76,18 +80,20 @@ export default function AcademicsPage() {
       </section>
 
       {/* Teaching Methodology */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold text-blue-900 mb-6">Teaching Methodology</h2>
+      <section className="page-shell py-20">
+        <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
+          Teaching methodology
+        </h2>
 
-        <div className="bg-white p-8 rounded-xl shadow leading-7">
-          <p className="text-gray-700 text-lg mt-3">
+        <div className="mt-5 rounded-2xl border border-slate-200 bg-white/80 p-7 leading-7 shadow-sm">
+          <p className="mt-3 text-sm text-slate-700 sm:text-base">
             Our teaching approach blends traditional classroom instruction with modern,
             interactive tools such as smart boards, visual explanations, and hands-on
             learning kits. Teachers undergo regular training to stay updated with the
             latest teaching techniques.
           </p>
 
-          <p className="text-gray-700 text-lg mt-5">
+          <p className="mt-5 text-sm text-slate-700 sm:text-base">
             We believe every child learns differently — which is why our teachers
             use personalized strategies to meet each student&apos;s strengths and needs.
             Continuous assessments ensure steady academic progress.

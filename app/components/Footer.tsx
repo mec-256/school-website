@@ -2,22 +2,27 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-900 text-white py-10 mt-16">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+    <footer className="mt-16 border-t border-slate-200 bg-slate-950 text-slate-100">
+      <div className="page-shell grid grid-cols-1 gap-10 py-12 md:grid-cols-3">
 
         {/* School Info */}
         <div>
-          <h3 className="text-xl font-semibold mb-3">SSKennedy School</h3>
-          <p className="text-gray-200 leading-6">
-            Providing quality education, modern facilities, and a nurturing 
-            environment to help children grow and succeed.
+          <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
+            SSKennedy School
+          </h3>
+          <p className="mt-4 max-w-sm text-sm text-slate-200/80">
+            Providing quality education, modern facilities, and a nurturing
+            environment so children can grow into confident, compassionate
+            learners.
           </p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-xl font-semibold mb-3">Quick Links</h3>
-          <ul className="space-y-2 text-gray-200">
+          <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
+            Quick links
+          </h3>
+          <ul className="mt-4 space-y-2 text-sm text-slate-200/80">
             <li>
               <Link href="/" className="hover:text-white">
                 Home
@@ -53,18 +58,27 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <h3 className="text-xl font-semibold mb-3">Contact</h3>
-          <p className="text-gray-200 leading-6">
-            Address: 123 Education Road, Andhra Pradesh, India<br />
-            Phone: +91 9876543210<br />
+          <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
+            Contact
+          </h3>
+          <p className="mt-4 text-sm text-slate-200/80">
+            123 Education Road, Andhra Pradesh, India
+            <br />
+            Phone: +91 9876543210
+            <br />
             Email: info@sskennedy.edu.in
           </p>
         </div>
 
       </div>
 
-      <div className="border-t border-blue-700 mt-10 pt-4 text-center text-gray-300">
-        © {new Date().getFullYear()} SSKennedy School. All Rights Reserved.
+      <div className="border-t border-slate-800">
+        <div className="page-shell flex flex-col items-center justify-between gap-3 py-4 text-xs text-slate-400 sm:flex-row">
+          <p>© {new Date().getFullYear()} SSKennedy School. All rights reserved.</p>
+          <p className="text-[11px]">
+            Made with care in India for curious young minds.
+          </p>
+        </div>
       </div>
     </footer>
   );

@@ -2,100 +2,113 @@ import Image from "next/image";
 
 export default function Facilities() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-
+    <section className="bg-white py-20">
+      <div className="page-shell">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center text-blue-900">
-          Our Facilities
-        </h2>
-
-        <p className="mt-4 text-gray-600 text-center max-w-2xl mx-auto">
-          SSKennedy School offers modern infrastructure that supports excellent learning.
-        </p>
+        <div className="text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
+            Campus at a glance
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+            Spaces that support every kind of learning
+          </h2>
+          <p className="mt-4 mx-auto max-w-2xl text-sm text-slate-600 sm:text-base">
+            From quiet reading corners to energetic playgrounds, students have
+            room to explore, experiment, and grow.
+          </p>
+        </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-12">
-
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Card 1 */}
-          <div className="rounded-xl overflow-hidden shadow hover:shadow-xl transition">
+          <article className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50/60 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
             <div className="relative h-40 w-full">
               <Image
                 src="/library.png"
                 alt="School library with bookshelves"
                 fill
-                className="object-cover"
+                className="object-cover transition duration-300 group-hover:scale-[1.03]"
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
                 priority
               />
             </div>
             <div className="p-5">
-              <h3 className="text-xl font-semibold text-blue-900">Library</h3>
-              <p className="text-gray-600 mt-2">
-                A well-stocked library encouraging curiosity and deeper learning.
+              <h3 className="text-base font-semibold text-slate-900 sm:text-lg">
+                Library
+              </h3>
+              <p className="mt-2 text-sm text-slate-600">
+                A well-stocked library that builds strong reading habits and
+                supports project-based learning.
               </p>
             </div>
-          </div>
+          </article>
 
           {/* Card 2 */}
-          <div className="rounded-xl overflow-hidden shadow hover:shadow-xl transition">
+          <article className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50/60 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
             <div className="relative h-40 w-full">
               <Image
                 src="/lab.png"
                 alt="Science laboratory with equipment"
                 fill
-                className="object-cover"
+                className="object-cover transition duration-300 group-hover:scale-[1.03]"
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
             </div>
             <div className="p-5">
-              <h3 className="text-xl font-semibold text-blue-900">Science Lab</h3>
-              <p className="text-gray-600 mt-2">
-                Advanced labs that promote hands-on scientific learning.
+              <h3 className="text-base font-semibold text-slate-900 sm:text-lg">
+                Science labs
+              </h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Well-equipped labs where students can test ideas, run
+                experiments, and learn by doing.
               </p>
             </div>
-          </div>
+          </article>
 
           {/* Card 3 */}
-          <div className="rounded-xl overflow-hidden shadow hover:shadow-xl transition">
+          <article className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50/60 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
             <div className="relative h-40 w-full">
               <Image
                 src="/sports.png"
                 alt="Students playing sports"
                 fill
-                className="object-cover"
+                className="object-cover transition duration-300 group-hover:scale-[1.03]"
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
             </div>
             <div className="p-5">
-              <h3 className="text-xl font-semibold text-blue-900">Sports</h3>
-              <p className="text-gray-600 mt-2">
-                Extensive sports facilities to promote physical fitness and teamwork.
+              <h3 className="text-base font-semibold text-slate-900 sm:text-lg">
+                Sports &amp; play
+              </h3>
+              <p className="mt-2 text-sm text-slate-600">
+                Spacious playgrounds and courts that encourage teamwork,
+                discipline, and physical fitness.
               </p>
             </div>
-          </div>
+          </article>
 
           {/* Card 4 */}
-          <div className="rounded-xl overflow-hidden shadow hover:shadow-xl transition">
+          <article className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50/60 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
             <div className="relative h-40 w-full">
               <Image
                 src="/transport.png"
                 alt="School buses for student transport"
                 fill
-                className="object-cover"
+                className="object-cover transition duration-300 group-hover:scale-[1.03]"
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
             </div>
             <div className="p-5">
-              <h3 className="text-xl font-semibold text-blue-900">School Transport</h3>
-              <p className="text-gray-600 mt-2">
-                Safe and reliable transportation connecting all major areas.
+              <h3 className="text-base font-semibold text-slate-900 sm:text-lg">
+                Safe transport
+              </h3>
+              <p className="mt-2 text-sm text-slate-600">
+                GPS-enabled buses and trained staff to ensure children travel
+                safely every day.
               </p>
             </div>
-          </div>
-
+          </article>
         </div>
-
       </div>
     </section>
   );

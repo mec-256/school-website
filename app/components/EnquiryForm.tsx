@@ -47,68 +47,75 @@ export default function EnquiryForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg space-y-6">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-6 rounded-2xl border border-slate-200 bg-white/80 p-8 shadow-sm backdrop-blur"
+    >
 
       {/* Parent Name */}
       <div>
-        <label className="text-black-700 font-medium">Parent Name</label>
+        <label className="text-sm font-medium text-slate-700">Parent name</label>
         <input
           type="text"
           name="name"
           value={form.name}
           onChange={handleChange}
           required
-          className="w-full mt-1 p-3 border rounded-lg"
+          className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 outline-none ring-offset-1 transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
         />
       </div>
 
       {/* Phone */}
       <div>
-        <label className="text-black-700 font-medium">Phone Number</label>
+        <label className="text-sm font-medium text-slate-700">Phone number</label>
         <input
           type="text"
           name="phone"
           value={form.phone}
           onChange={handleChange}
           required
-          className="w-full mt-1 p-3 border rounded-lg"
+          className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 outline-none ring-offset-1 transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
         />
       </div>
 
       {/* Email */}
       <div>
-        <label className="text-gray-700 font-medium">Email (optional)</label>
+        <label className="text-sm font-medium text-slate-700">
+          Email (optional)
+        </label>
         <input
           type="email"
           name="email"
           value={form.email}
           onChange={handleChange}
-          className="w-full mt-1 p-3 border rounded-lg text-black"
+          className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 outline-none ring-offset-1 transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
         />
       </div>
 
       {/* Child Name */}
       <div>
-        <label className="text-black-700 font-medium">Child Name</label>
+        <label className="text-sm font-medium text-slate-700">Child name</label>
         <input
           type="text"
           name="childName"
           value={form.childName}
           onChange={handleChange}
           required
-          className="w-full mt-1 p-3 border rounded-lg"
+          className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 outline-none ring-offset-1 transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
         />
       </div>
 
       {/* Class */}
       <div>
-        <label className="text-black-700 font-medium">Class Applying For</label>
+        <label className="text-sm font-medium text-slate-700">
+          Class applying for
+        </label>
         <select
           name="classApplying"
           value={form.classApplying}
           onChange={handleChange}
           required
-          className="w-full mt-1 p-3 border rounded-lg"
+          className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 outline-none ring-offset-1 transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
         >
           <option value="">Select Class</option>
           <option value="Nursery">Nursery</option>
@@ -124,26 +131,30 @@ export default function EnquiryForm() {
 
       {/* Message */}
       <div>
-        <label className="text-gray-700 font-medium">Message</label>
+        <label className="text-sm font-medium text-slate-700">Message</label>
         <textarea
           name="message"
           value={form.message}
           onChange={handleChange}
           rows={4}
-          className="w-full mt-1 p-3 border rounded-lg"
+          className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 outline-none ring-offset-1 transition focus:border-blue-600 focus:ring-2 focus:ring-blue-100"
         ></textarea>
       </div>
 
       {/* Submit */}
       <button
         type="submit"
-        className="bg-blue-700 text-black px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
+        className="inline-flex w-full items-center justify-center rounded-full bg-blue-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-800 hover:shadow-md sm:w-auto"
       >
         Submit Enquiry
       </button>
 
       {/* Status Message */}
-      {status && <p className="text-center mt-4 text-blue-900 font-medium">{status}</p>}
+      {status && (
+        <p className="mt-3 text-center text-sm font-medium text-blue-900">
+          {status}
+        </p>
+      )}
     </form>
   );
 }
